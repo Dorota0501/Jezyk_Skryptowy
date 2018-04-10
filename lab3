@@ -1,16 +1,34 @@
 from array import *
-
+import random
 #Zadanie 2
-my_array = array('i',[])
-cond = 1
+def zad2():
+    my_array = array('i',[])
+    cond = 1
 
-while(cond < 5):
-    print("podaj dane do tablicy ")
-    x = input()
-    my_array.append(int(x))
-    cond = cond +1
+    while(cond < 5):
+        print("podaj dane do tablicy ")
+        x = input()
+        my_array.append(int(x))
+        cond = cond +1
 
-print("wypisuje elementy tablicy")
-my_array.reverse()
-for i in my_array:
-    print(i)
+    print("wypisuje elementy tablicy")
+    my_array.reverse()
+    for i in my_array:
+        print(i)
+
+#Zadanie 3
+
+def zad3():
+    my_array = array('i',[])
+    cond = 1
+
+    my_file = open ("result.txt","w")
+
+    while(cond < 5):
+        cond = cond +1
+        my_array.append(random.randint(-5,5))
+
+    my_file.write(str(my_array))
+    my_file.close()
+
+zad3()
