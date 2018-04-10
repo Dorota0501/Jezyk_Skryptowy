@@ -1,0 +1,16 @@
+from array import *
+
+#Zadanie 2
+my_array = array('i',[])
+cond = 1
+
+while(cond < 5):
+    print("podaj dane do tablicy ")
+    x = input()
+    my_array.append(int(x))
+    cond = cond +1
+
+print("wypisuje elementy tablicy")
+my_array.reverse()
+for i in my_array:
+    print(i)
